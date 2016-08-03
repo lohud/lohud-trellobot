@@ -51,6 +51,10 @@ var parseCommands = function (message, channel){
     } else if (typeofHelp == 'help'){
       text = "I think we're stuck in an infinity loop...";
     }
+  } else if (typeofCommand == 'about'){
+    username = 'Seymour';
+    emoji = ':doge:';
+    text = "`Still waiting outside Panucci's.` Originally built by Kai in March of 2016, I was left behind when he decided to pursue other opportunities in a far away land.";
   } else {
     username = 'Prof. Farnsworth';
     emoji = ':farnsworth:';

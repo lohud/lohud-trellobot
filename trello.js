@@ -35,7 +35,7 @@ var grab = function (){
         username = 'Bender';
         emoji = ':bender:';
         bot.sendMessage(text, channel, username, emoji);
-        receiveData();
+        grab();
       } else {
         // console.log(data);
         receiveData(data);
@@ -229,7 +229,7 @@ var receiveData = function (data){
   // end loop through the asset
 
   // console.log(date, " just grabbed")
-  setTimeout(grab, 5000);
+  setTimeout(grab, 10000);
   var newJSON = JSON.stringify(currentAssets);
   fs.writeFile('./trello.json', newJSON, function (err){
     if(err){

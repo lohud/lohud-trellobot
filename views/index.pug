@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='css/app.css')
+    title #{title}
+
+
+  body(ng-app="trellobot" ng-controller="botdata")
+
+    #banner(style="height:77px;")
+    script.
+      if(window.self==window.top) {
+        var banner = document.getElementById("banner");
+        banner.style.backgroundColor = "black"; 
+        banner.innerHTML = "<a href='http://www.lohud.com'><img src='http://data.lohud.com/lohud%20logos/site-masthead-logo.png' width='300' /></a><br>";
+      }
+    
+    block content
+          
+
+    .row
+      .footer
+        //- p Contact Kai Teoh (@jkteoh), jteoh@lohud.com with questions. 
+//- script(src="bower_components/jquery/dist/jquery.js")
+//- script(src="https://api.trello.com/1/client.js?key=40c0803ee3f175ec501462f86fc9044a329e17c1f5fff16dd9c7b0c4f790088a")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js")
+script(src="bower_components/what-input/what-input.js")
+script(src="bower_components/jquery/dist/jquery.min.js")
+script(src="bower_components/foundation-sites/dist/foundation.js")
+script(src="js/lohudanalytics.js")
+script(src="js/app.js")
+script(src="js/controller.js")

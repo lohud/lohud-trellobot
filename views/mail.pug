@@ -1,0 +1,15 @@
+extend index
+
+block content
+    .row(style="padding-top:20px;")
+        .callout(class="#{status}") #{message}
+        h1 Your Inbox
+        table
+            tr
+                th From
+                th Subject
+                th Received
+        #container
+            each value, key in JSON
+                each item, index in value
+                    p #{index}, #{item}
